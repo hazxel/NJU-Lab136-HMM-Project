@@ -1,0 +1,4 @@
+
+C:\Programs\MathWorks\MATLAB\R2018a\bin\win64\mex.exe -R2018a ${SOURCE_FILE}
+
+C:\Programs\MathWorks\MATLAB\R2018a\bin\win64\mex.exe -R2018a .\calcTrajectoryOne.cpp
