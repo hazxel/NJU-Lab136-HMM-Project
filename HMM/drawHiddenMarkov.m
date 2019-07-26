@@ -1,4 +1,4 @@
-function drawHiddenMarkov(modelFolders, mitoFolders, A, A_inf, B, B_edges, B_inf)
+function drawHiddenMarkov(modelFolders, mitoFolders, N, A, A_inf, B, B_edges, B_inf, L)
 
 if nargin < 1; load parameters modelFolders; end
 if nargin < 2; load parameters mitoFolders; end
@@ -12,9 +12,9 @@ for modelFolder = modelFolders
 folder = "result/" + mitoFolder + "-" + modelFolder;
 
 if nargin < 2
-  if ~exist(folder + ".mat", "file"); continue; end
   if ~exist(folder, "dir"); mkdir(folder); end
-  load(folder, "N", "A", "A_inf", "B", "B_edges", "B_inf");
+  load(folder, "N", "A", "A_inf", "B", "B_edges", "B_inf", "L");
+  if L(1) == Inf; continue; end
 end
 
 tic
